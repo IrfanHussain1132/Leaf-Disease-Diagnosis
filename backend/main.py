@@ -5,7 +5,7 @@ import io
 import requests
 import os
 import json
-from model import predict
+from backend.model import predict
 
 app = FastAPI()
 
