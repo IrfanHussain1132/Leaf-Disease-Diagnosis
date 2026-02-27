@@ -1,0 +1,29 @@
+/* Custom Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal-animation {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+#results {
+    scroll-margin-top: 2rem;
+}
+
+/* Smooth range transitions for progress bar */
+#res-confidence-bar {
+    transition: width 1.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+/* Better typography for numbers */
+#res-confidence-text {
+    font-variant-numeric: tabular-nums;
+}
