@@ -6,7 +6,7 @@ albumentations==2.0.8
 annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.12.1
-basicsr==1.4.2
+
 blinker==1.9.0
 certifi==2026.1.4
 charset-normalizer==3.4.4
@@ -68,7 +68,7 @@ onnx==1.20.1
 onnxruntime==1.23.2
 openai==2.17.0
 opencv-python==4.13.0.90
-opencv-python-headless==4.13.0.90
+
 openpyxl==3.1.5
 packaging==26.0
 pandas==3.0.0
