@@ -6,6 +6,8 @@ import requests
 import os
 import json
 from backend.model import predict
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI()
 
@@ -46,7 +48,7 @@ async def predict_image(file: UploadFile = File(...)):
         result = predict(image)
 
         # 2️⃣ Confidence Threshold
-        if result["confidence"] < 75:
+        if result["confidence"] < 65:
             return {
                 "disease": "Uncertain Prediction",
                 "confidence": result["confidence"]
