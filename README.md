@@ -103,7 +103,28 @@ The <b>Level-2 model</b> improves generalization and real-world performance usin
 <img src="https://github.com/user-attachments/assets/d65cbeaf-0353-4bf9-9e39-6c0cb7fd06d1" width="48%">
 <img src="https://github.com/user-attachments/assets/8250311c-99eb-4254-a4c0-586e1be508fb" width="48%">
 </p>
+<hr>
 
+<h2>🌱 Supported Crops</h2>
+
+<p>
+The model is trained only on the following crop types. Predictions are reliable only for these crops.
+</p>
+
+<ul>
+<li>Apple</li>
+<li>Blueberry</li>
+<li>Cherry</li>
+<li>Corn (Maize)</li>
+<li>Potato</li>
+<li>Rice</li>
+<li>Tomato</li>
+</ul>
+
+<p>
+⚠️ If an image from a crop outside this list is uploaded, the system may return 
+<b>"Uncertain Prediction"</b> or produce inaccurate results.
+</p>
 <hr>
 
 <h2>⚠️ When Results May Not Be Displayed</h2>
