@@ -40,3 +40,5 @@ Fine-tuning deeper layers
 **Metric**  **Score**
 **Training Accuracy**  98.63%
 **Validation Accuracy**  98.97%
+
+<img width="1917" height="1199" alt="image" src="https://github.com/user-attachments/assets/d65cbeaf-0353-4bf9-9e39-6c0cb7fd06d1" />
