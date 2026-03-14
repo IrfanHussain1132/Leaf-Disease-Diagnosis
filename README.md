@@ -1,12 +1,13 @@
 <h1 align="center">🌿 AgriAI – AI Powered Plant Disease Detection</h1>
 
 <p align="center">
-AgriAI is a <b>full-stack AI system for plant disease detection</b> using <b>Deep Learning</b> and 
-<b>LLM-based treatment recommendations</b>.
+AgriAI is a <b>full-stack AI system for plant disease detection</b> using 
+<b>Deep Learning</b> and <b>LLM-based treatment recommendations</b>.
 </p>
 
 <p align="center">
-The system combines <b>Computer Vision + Large Language Models + Web APIs</b> to help farmers detect plant diseases early and receive treatment guidance.
+The system combines <b>Computer Vision + Large Language Models + Web APIs</b> 
+to help farmers detect plant diseases early and receive treatment guidance.
 </p>
 
 <hr>
@@ -33,7 +34,7 @@ The <b>Level-2 model</b> improves generalization and real-world performance usin
 
 <h3>Architecture</h3>
 
-<table border="1" cellpadding="8">
+<table>
 <tr>
 <th>Component</th>
 <th>Details</th>
@@ -46,7 +47,7 @@ The <b>Level-2 model</b> improves generalization and real-world performance usin
 
 <tr>
 <td>Input Size</td>
-<td>224 x 224</td>
+<td>224 × 224</td>
 </tr>
 
 <tr>
@@ -79,7 +80,7 @@ The <b>Level-2 model</b> improves generalization and real-world performance usin
 
 <h2>📊 Model Performance</h2>
 
-<table border="1" cellpadding="8">
+<table>
 <tr>
 <th>Metric</th>
 <th>Score</th>
@@ -103,6 +104,7 @@ The <b>Level-2 model</b> improves generalization and real-world performance usin
 <img src="https://github.com/user-attachments/assets/d65cbeaf-0353-4bf9-9e39-6c0cb7fd06d1" width="48%">
 <img src="https://github.com/user-attachments/assets/8250311c-99eb-4254-a4c0-586e1be508fb" width="48%">
 </p>
+
 <hr>
 
 <h2>🌱 Supported Crops</h2>
@@ -125,27 +127,22 @@ The model is trained only on the following crop types. Predictions are reliable 
 ⚠️ If an image from a crop outside this list is uploaded, the system may return 
 <b>"Uncertain Prediction"</b> or produce inaccurate results.
 </p>
+
 <hr>
 
 <h2>⚠️ When Results May Not Be Displayed</h2>
 
 <p>
-The system may return <b>“Uncertain Prediction”</b> or may not display results in certain conditions to avoid incorrect diagnosis.
+The system may return <b>“Uncertain Prediction”</b> to avoid incorrect diagnosis in the following situations:
 </p>
 
 <h3>1️⃣ Low Model Confidence</h3>
 
-<p>
-If the prediction confidence is below <b>65%</b>, the system returns:
-</p>
+<p>If prediction confidence is below <b>65%</b>:</p>
 
 <pre>
 Uncertain Prediction
 </pre>
-
-<p>
-This prevents misleading disease predictions.
-</p>
 
 <h3>2️⃣ Poor Image Quality</h3>
 
@@ -156,15 +153,12 @@ This prevents misleading disease predictions.
 <li>Too much background</li>
 </ul>
 
-<p>
-The model performs best when the <b>leaf is clearly visible</b>.
-</p>
+<p>The model performs best when the <b>leaf is clearly visible</b>.</p>
 
 <h3>3️⃣ Unsupported Crop Type</h3>
 
 <p>
-The model is trained only on specific crops and diseases present in the dataset.  
-If a different plant is uploaded, predictions may be uncertain.
+If a plant outside the supported crop list is uploaded, predictions may be uncertain.
 </p>
 
 <h3>4️⃣ Multiple Leaves / Complex Background</h3>
@@ -175,9 +169,7 @@ If a different plant is uploaded, predictions may be uncertain.
 <li>Partially visible leaves</li>
 </ul>
 
-<p>
-These may reduce prediction accuracy.
-</p>
+<p>These may reduce prediction accuracy.</p>
 
 <h3>5️⃣ External API Failure</h3>
 
@@ -185,9 +177,7 @@ These may reduce prediction accuracy.
 Treatment recommendations are generated using the <b>Groq LLM API</b>.
 </p>
 
-<p>
-If the API fails due to:
-</p>
+<p>If the API fails due to:</p>
 
 <ul>
 <li>Network issues</li>
@@ -195,9 +185,7 @@ If the API fails due to:
 <li>Rate limits</li>
 </ul>
 
-<p>
-The system automatically returns a <b>fallback treatment response</b>.
-</p>
+<p>The system returns a <b>fallback treatment response</b>.</p>
 
 <hr>
 
@@ -209,6 +197,45 @@ The system automatically returns a <b>fallback treatment response</b>.
 <li><b>Frontend:</b> HTML, CSS, JavaScript</li>
 <li><b>AI Services:</b> Groq LLM API</li>
 </ul>
+
+<hr>
+
+<h2>📂 Project Structure</h2>
+
+<pre>
+AgriAI/
+│
+├── backend/
+│   ├── data/
+│   │   ├── train/
+│   │   └── val/
+│   │
+│   ├── color/
+│   ├── venv/
+│   ├── __pycache__/
+│   │
+│   ├── __init__.py
+│   ├── app.py
+│   ├── main.py
+│   ├── model.py
+│   ├── train.py
+│   ├── evaluate.py
+│   ├── test_inference.py
+│   ├── dataset_split.py
+│   │
+│   ├── best_model.pth
+│   ├── class_names.json
+│   │
+│   ├── .env
+│   ├── .env.example
+│   ├── requirements.txt
+│   └── render.yaml
+│
+├── frontend/
+│
+├── .gitignore
+└── runtime.txt
+</pre>
 
 <hr>
 
